@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard - Incident Reporting System</title>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/dashboard.css">
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body class="dashboard-body">
+    <header class="topbar">
+        <h1>Admin Dashboard</h1>
+        <div>
+            <span id="userLabel"></span>
+            <button id="logoutBtn">Log Out</button>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+
+        <section class="summary-section">
+            <h2>Overview</h2>
+            <div id="summaryCards" class="summary-cards"></div>
+        </section>
+
+        <section class="my-reports-section">
+            <h2>All Incidents</h2>
+            <div class="filters">
+                <label for="statusFilter">Status:</label>
+                <select id="statusFilter">
+                    <option value="">All</option>
+                    <option value="new">New</option>
+                    <option value="under_review">Under Review</option>
+                    <option value="investigating">Investigating</option>
+                    <option value="resolved">Resolved</option>
+                    <option value="closed">Closed</option>
+                </select>
+
+                <label for="severityFilter">Severity:</label>
+                <select id="severityFilter">
+                    <option value="">All</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                    <option value="critical">Critical</option>
+                </select>
+            </div>
+
+            <table id="reportsTable">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Reporter</th>
+                        <th>Category</th>
+                        <th>Severity</th>
+                        <th>Status</th>
+                        <th>Assigned</th>
+                        <th>Reported</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="reportsBody"></tbody>
+            </table>
+        </section>
+
+        <section id="detailPanel" class="detail-panel hidden">
+            <h2>Incident Detail</h2>
+            <div id="detailContent"></div>
+
+            <form id="statusForm">
+                <label for="newStatus">Update Status</label>
+                <select id="newStatus">
+                    <option value="new">New</option>
+                    <option value="under_review">Under Review</option>
+                    <option value="investigating">Investigating</option>
+                    <option value="resolved">Resolved</option>
+                    <option value="closed">Closed</option>
+                </select>
+                <label for="statusNote">Note (optional)</label>
+                <textarea id="statusNote" rows="2"></textarea>
+                <button type="submit">Update</button>
+                <button type="button" id="closeDetailBtn">Close</button>
+            </form>
+
+            <h3>Audit Trail</h3>
+            <ul id="logsList"></ul>
+        </section>
+
+    </main>
+
+    <script src="/js/admin.js"></script>
+</body>
+</html>

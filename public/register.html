@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register - Incident Reporting System</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Incident Reporting System</h1>
+        <h2>Create Account</h2>
+
+        <form id="registerForm">
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone_number">Phone Number (optional)</label>
+            <input type="tel" id="phone_number" name="phone_number" placeholder="e.g. 0712345678">
+
+            <label for="password">Password (min 8 characters)</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p id="message"></p>
+
+        <p>Already have an account? <a href="/login.html">Log in here</a></p>
+    </div>
+
+    <script src="/js/register.js"></script>
+</body>
+</html>

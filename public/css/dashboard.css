@@ -1,0 +1,80 @@
+.dashboard-body {
+    display: block;
+    background: #f4f6f8;
+    min-height: 100vh;
+}
+
+.topbar {
+    background: #16213e;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.topbar h1 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #fff;
+}
+
+.topbar button {
+    background: #e94560;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.dashboard-main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.report-form-section, .my-reports-section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.report-form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.85rem;
+}
+
+th {
+    color: #555;
+    font-weight: 600;
+}
+
+.status-new { color: #e67e22; }
+.status-under_review { color: #2980b9; }
+.status-investigating { color: #8e44ad; }
+.status-resolved { color: #27ae60; }
+.status-closed { color: #7f8c8d; }
+
+.severity-critical { font-weight: bold; color: #c0392b; }
+.severity-high { color: #e74c3c; }
+.severity-medium { color: #e67e22; }
+.severity-low { color: #7f8c8d; }
