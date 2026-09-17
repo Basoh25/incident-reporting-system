@@ -59,17 +59,17 @@ Since the project is specifically about database security, authentication, and a
 
 
 
-\- Passwords are hashed, never stored as plain text
+- Passwords are hashed, never stored as plain text
 
-\- Every admin-only route checks the user's role on the server, not just hiding a button in the frontend
+- Every admin-only route checks the user's role on the server, not just hiding a button in the frontend
 
-\- Users can only see their own reports — I tested this by making a second account and trying to view another user's report by changing the ID in the URL, it correctly blocks it (this is a known vuln type called IDOR)
+- Users can only see their own reports — I tested this by making a second account and trying to view another user's report by changing the ID in the URL, it correctly blocks it (this is a known vuln type called IDOR)
 
-\- All the database queries use parameterized statements so user input can't mess with the SQL
+- All the database queries use parameterized statements so user input can't mess with the SQL
 
 
 
-\## Running it locally
+## Running it locally
 
 
 
@@ -117,27 +117,27 @@ Admin@123
 
 
 
-\## Folder layout
+## Folder layout
 
-config/db.js - database connection
+- config/db.js - database connection
 
-db/schema.sql - the table structure
+- db/schema.sql - the table structure
 
-db/seed.js - creates the admin account
+- db/seed.js - creates the admin account
 
-middleware/auth.js - login/role checks
+- middleware/auth.js - login/role checks
 
-routes/ - the actual API endpoints (auth, incidents, admin)
+- routes/ - the actual API endpoints (auth, incidents, admin)
 
-public/ - frontend pages
+- public/ - frontend pages
 
-server.js - starts everything
-
-
+- server.js - starts everything
 
 
 
-\## Known limitations
+
+
+## Known limitations
 
 
 
