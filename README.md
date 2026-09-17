@@ -1,4 +1,4 @@
-\# Cybersecurity Incident Reporting System
+# Cybersecurity Incident Reporting System
 
 
 
@@ -10,29 +10,28 @@ I built it because most small organizations don't really have a proper way for s
 
 
 
-\## What it does
+## What it does
 
 
 
 Regular users can:
 
-\- Create an account and log in
+- Create an account and log in
 
-\- Submit an incident report (title, category, severity, description, plus contact info)
+- Submit an incident report (title, category, severity, description, plus contact info)
 
-\- See the status of their own reports
+- See the status of their own reports
 
 
 
 Admins can:
+- See every report from every user
 
-\- See every report from every user
+- Filter by status or severity
 
-\- Filter by status or severity
+- Open a report and change its status (investigating, resolved, etc.)
 
-\- Open a report and change its status (investigating, resolved, etc.)
-
-\- See a basic summary of how many incidents are in each state
+- See a basic summary of how many incidents are in each state
 
 
 
@@ -40,7 +39,7 @@ Every time a report is created or its status changes, it gets logged with a time
 
 
 
-\## Tech used
+## Tech used
 
 
 
@@ -52,7 +51,7 @@ For passwords I used bcrypt (well, bcryptjs — the regular bcrypt package neede
 
 
 
-\## Some of the security stuff I focused on
+## Some of the security stuff I focused on
 
 
 
