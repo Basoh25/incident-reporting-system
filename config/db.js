@@ -1,11 +1,7 @@
-// ============================================================
-// Central MySQL connection pool.
-// A pool (not a single connection) so concurrent requests don't
-// block each other, and so a dropped connection doesn't kill the app.
-// ============================================================
 require('dotenv').config();
 const mysql = require('mysql2/promise');
 
+// connection pool so requests don't block each other
 const pool = mysql.createPool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -14,7 +10,8 @@ const pool = mysql.createPool({
     port: process.env.DB_PORT || 3306,
     waitForConnections: true,
     connectionLimit: 10,
-    queueLimit: 0
+    queueLimit: 0,
+    ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : undefined
 });
 
 module.exports = pool;
