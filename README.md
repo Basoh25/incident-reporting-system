@@ -8,7 +8,17 @@ This is my final year diploma project. It's a system that lets people report sus
 
 I built it because most small organizations don't really have a proper way for staff to report security issues — it usually just gets mentioned to a manager informally and then nobody follows up on it. This gives it an actual paper trail.
 
+## Live demo
 
+You can try it here: https://incident-reporting-system-17r5.onrender.com
+
+Default admin login:
+
+admin@example.com
+Admin@123
+
+
+It's hosted on Render's free tier, so if it hasn't had traffic in a while, the first load can take 30-50 seconds to wake back up — just give it a moment.
 
 ## What it does
 
