@@ -3,3 +3,4 @@ node_modules/
 *.log
 *.msi
 *.mp4
+db/run-remote-schema.js

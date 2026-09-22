@@ -5,6 +5,9 @@
 }
 
 .topbar {
+   position: sticky;
+   top:  0;
+   z-index: 100;
     background: #16213e;
     color: #fff;
     display: flex;
